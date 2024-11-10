@@ -126,12 +126,6 @@ If you use this implementation in your research, please cite:
 }
 ```
 
-## Acknowledgments
-
-- Inspired by scikit-learn's KNN implementation
-- Thanks to the open-source community for valuable feedback
-- Special thanks to all contributors
-
 ## Support
 
 - 📫 For bugs and feature requests, please use the GitHub Issues
