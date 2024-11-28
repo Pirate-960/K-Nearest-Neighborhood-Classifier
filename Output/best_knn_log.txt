@@ -1,0 +1,2 @@
+Best k: 4, Best Distance Metric: euclidean_distance
+Best LOOCV Accuracy: 0.64

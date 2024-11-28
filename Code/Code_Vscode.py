@@ -10,6 +10,13 @@ def euclidean_distance(x1, x2):
 def manhattan_distance(x1, x2):
     return np.sum(np.abs(x1 - x2))
 
+def normalize_features(features):
+    """Normalize features to a 0-1 range after ensuring all columns are numeric."""
+    # Convert boolean columns to integers
+    features = features.applymap(lambda x: int(x) if isinstance(x, (bool, np.bool_)) else x)
+    # Perform normalization
+    return (features - features.min()) / (features.max() - features.min())
+
 # Data Preparation
 def load_dataset_from_json(file_path):
     with open(file_path, 'r') as f:
@@ -50,14 +57,13 @@ def evaluate_knn(features, labels, k, distance_metric, log_file):
             predictions.append(predicted_label)
             actuals.append(actual_label)
 
-            # Log and Print Detailed Prediction Information
             log.write(f"--- Test Instance {i+1} ---\n")
             log.write(f"Actual Label: {actual_label}, Predicted Label: {predicted_label}\n")
             log.write(f"Neighbors (distance, label):\n")
             print(f"Test Instance {i+1}:")
             print(f"Actual: {actual_label}, Predicted: {predicted_label}")
             print(f"Neighbors (distance, label):")
-
+            
             for dist, lbl in neighbors:
                 log.write(f"  Distance: {dist:.3f}, Label: {lbl}\n")
                 print(f"  Distance: {dist:.3f}, Label: {lbl}")
@@ -86,7 +92,6 @@ def loocv_knn(features, labels, k, distance_metric, log_file):
             predictions.append(predicted_label)
             actuals.append(test_label)
 
-            # Log and Print Detailed Calculations
             log.write(f"--- Test Instance {i+1} ---\n")
             log.write(f"Actual Label: {test_label}, Predicted Label: {predicted_label}\n")
             log.write(f"Neighbors (distance, label):\n")
@@ -109,84 +114,37 @@ def loocv_knn(features, labels, k, distance_metric, log_file):
         print(f"\nLOOCV Accuracy: {accuracy:.2f}")
     return accuracy, predictions, actuals
 
-def calculate_metrics(predictions, actuals, log_file=None):
-    # Initialize confusion matrix counters
-    TP, TN, FP, FN = 0, 0, 0, 0
-
-    for actual_class, predicted_class in zip(actuals, predictions):
-        if actual_class == 1 and predicted_class == 1:  # Actual Yes, Predicted Yes
-            TP += 1
-        elif actual_class == 0 and predicted_class == 0:  # Actual No, Predicted No
-            TN += 1
-        elif actual_class == 0 and predicted_class == 1:  # Actual No, Predicted Yes
-            FP += 1
-        elif actual_class == 1 and predicted_class == 0:  # Actual Yes, Predicted No
-            FN += 1
-
-    # Calculate metrics
-    accuracy = (TP + TN) / len(predictions)
-    precision = TP / (TP + FP) if (TP + FP) > 0 else 0
-    recall = TP / (TP + FN) if (TP + FN) > 0 else 0
-    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
-
-    # Build formatted confusion matrix
-    matrix_str = (
-        "--------------------------------------------------\n"
-        "Confusion Matrix:\n"
-        "--------------------------------------------------\n"
-        "                    Predicted\n"
-        "            |    Yes    |     No    |\n"
-        "------------|-----------|-----------|\n"
-        f"Actual Yes  |   {TP:^6}  |   {FN:^6}  |\n"
-        f"Actual No   |   {FP:^6}  |   {TN:^6}  |\n"
-        "--------------------------------------------------\n"
-        f"True Positives (TP):  {TP}\n"
-        f"True Negatives (TN):  {TN}\n"
-        f"False Positives (FP): {FP}\n"
-        f"False Negatives (FN): {FN}\n"
-        "--------------------------------------------------\n"
-        f"Overall Accuracy: {accuracy:.2f}\n"
-        "--------------------------------------------------\n"
-    )
-
-    print(matrix_str)
-
-    if log_file:
-        with open(log_file, 'a') as log:
-            log.write(matrix_str)
-
-    metrics = {
-        "Accuracy": accuracy,
-        "Precision": precision,
-        "Recall": recall,
-        "F1 Score": f1_score,
-    }
-    return metrics
-
 # Execution
 if __name__ == "__main__":
     json_path = "Dataset/play_tennis.json"
     dataset = load_dataset_from_json(json_path)
     features, labels = encode_categorical_features(dataset)
+    features = normalize_features(features)  # Normalize features for better distance calculations
     features = features.values
     labels = labels.values
 
     print("===== Dataset =====\n")
     print(dataset.to_string(index=False))
-    with open("Output/dataset_log.txt", "w") as dataset_log:
+    with open("Output/Dataset Table/dataset_log.txt", "w") as dataset_log:
         dataset_log.write("===== Dataset =====\n\n")
         dataset_log.write(dataset.to_string(index=False))
 
-    k = 3
+    k_values = range(1, len(features))  # Try all k values from 1 to n-1
+    best_accuracy = 0
+    best_k = None
+    best_distance_metric = None
 
-    distance_metric = euclidean_distance
-    log_without_loocv = "Output/knn_without_loocv_log.txt"
-    log_with_loocv = "Output/knn_with_loocv_log.txt"
+    for k in k_values:
+        for distance_metric in [euclidean_distance, manhattan_distance]:
+            log_file = f"Output/Leave-One-Out-Cross-Validation/knn_log_k{k}_{distance_metric.__name__}.txt"
+            accuracy, _, _ = loocv_knn(features, labels, k, distance_metric, log_file)
+            if accuracy > best_accuracy:
+                best_accuracy = accuracy
+                best_k = k
+                best_distance_metric = distance_metric
 
-    # Without LOOCV
-    predictions, actuals = evaluate_knn(features, labels, k, distance_metric, log_without_loocv)
-    metrics = calculate_metrics(predictions, actuals, log_without_loocv)
-
-    # With LOOCV
-    loocv_accuracy, loocv_predictions, loocv_actuals = loocv_knn(features, labels, k, distance_metric, log_with_loocv)
-    loocv_metrics = calculate_metrics(loocv_predictions, loocv_actuals, log_with_loocv)
+    print(f"Best k: {best_k}, Best Distance Metric: {best_distance_metric.__name__}")
+    print(f"Best LOOCV Accuracy: {best_accuracy:.2f}")
+    with open("Output/best_knn_log.txt", "w") as best_log:
+        best_log.write(f"Best k: {best_k}, Best Distance Metric: {best_distance_metric.__name__}\n")
+        best_log.write(f"Best LOOCV Accuracy: {best_accuracy:.2f}\n")

@@ -1,0 +1,105 @@
+===== LOOCV Detailed Calculations =====
+
+k: 3, Distance Metric: manhattan_distance
+Total Instances: 14
+
+--- Test Instance 1 ---
+Actual Label: 0, Predicted Label: 0
+Neighbors (distance, label):
+  Distance: 1.077, Label: 0
+  Distance: 1.154, Label: 1
+  Distance: 2.538, Label: 0
+
+--- Test Instance 2 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.077, Label: 0
+  Distance: 2.077, Label: 1
+  Distance: 3.385, Label: 1
+
+--- Test Instance 3 ---
+Actual Label: 1, Predicted Label: 0
+Neighbors (distance, label):
+  Distance: 1.154, Label: 0
+  Distance: 1.769, Label: 1
+  Distance: 2.077, Label: 0
+
+--- Test Instance 4 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.462, Label: 1
+  Distance: 1.769, Label: 0
+  Distance: 2.077, Label: 1
+
+--- Test Instance 5 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.077, Label: 0
+  Distance: 1.385, Label: 1
+  Distance: 2.077, Label: 1
+
+--- Test Instance 6 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.077, Label: 1
+  Distance: 1.077, Label: 1
+  Distance: 2.308, Label: 1
+
+--- Test Instance 7 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.077, Label: 0
+  Distance: 2.154, Label: 1
+  Distance: 2.154, Label: 1
+
+--- Test Instance 8 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 2.077, Label: 1
+  Distance: 2.231, Label: 1
+  Distance: 2.308, Label: 1
+
+--- Test Instance 9 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 2.077, Label: 0
+  Distance: 2.154, Label: 1
+  Distance: 2.154, Label: 1
+
+--- Test Instance 10 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.385, Label: 1
+  Distance: 1.462, Label: 1
+  Distance: 2.308, Label: 0
+
+--- Test Instance 11 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 2.077, Label: 1
+  Distance: 2.154, Label: 1
+  Distance: 2.231, Label: 0
+
+--- Test Instance 12 ---
+Actual Label: 1, Predicted Label: 0
+Neighbors (distance, label):
+  Distance: 1.154, Label: 0
+  Distance: 2.077, Label: 1
+  Distance: 2.308, Label: 0
+
+--- Test Instance 13 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.769, Label: 1
+  Distance: 2.308, Label: 1
+  Distance: 2.462, Label: 1
+
+--- Test Instance 14 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.154, Label: 1
+  Distance: 1.769, Label: 1
+  Distance: 2.308, Label: 1
+
+
+LOOCV Accuracy: 0.57

@@ -1,0 +1,217 @@
+===== LOOCV Detailed Calculations =====
+
+k: 11, Distance Metric: euclidean_distance
+Total Instances: 14
+
+--- Test Instance 1 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.003, Label: 0
+  Distance: 1.012, Label: 1
+  Distance: 1.513, Label: 0
+  Distance: 1.542, Label: 1
+  Distance: 1.689, Label: 1
+  Distance: 2.013, Label: 1
+  Distance: 2.024, Label: 1
+  Distance: 2.053, Label: 1
+  Distance: 2.143, Label: 1
+  Distance: 2.172, Label: 1
+  Distance: 2.269, Label: 0
+
+--- Test Instance 2 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.003, Label: 0
+  Distance: 1.416, Label: 1
+  Distance: 1.774, Label: 1
+  Distance: 1.792, Label: 0
+  Distance: 1.814, Label: 1
+  Distance: 1.865, Label: 1
+  Distance: 1.895, Label: 1
+  Distance: 1.928, Label: 1
+  Distance: 2.024, Label: 0
+  Distance: 2.203, Label: 0
+  Distance: 2.241, Label: 1
+
+--- Test Instance 3 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.012, Label: 0
+  Distance: 1.262, Label: 1
+  Distance: 1.416, Label: 0
+  Distance: 1.734, Label: 1
+  Distance: 1.739, Label: 1
+  Distance: 1.759, Label: 1
+  Distance: 1.774, Label: 0
+  Distance: 1.792, Label: 1
+  Distance: 1.865, Label: 1
+  Distance: 2.013, Label: 0
+  Distance: 2.071, Label: 1
+
+--- Test Instance 4 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.101, Label: 1
+  Distance: 1.262, Label: 0
+  Distance: 1.416, Label: 1
+  Distance: 1.447, Label: 0
+  Distance: 1.542, Label: 1
+  Distance: 1.734, Label: 1
+  Distance: 1.739, Label: 0
+  Distance: 2.013, Label: 0
+  Distance: 2.013, Label: 1
+  Distance: 2.037, Label: 1
+  Distance: 2.071, Label: 1
+
+--- Test Instance 5 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.003, Label: 0
+  Distance: 1.071, Label: 1
+  Distance: 1.416, Label: 1
+  Distance: 1.423, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.542, Label: 1
+  Distance: 1.739, Label: 1
+  Distance: 1.865, Label: 0
+  Distance: 2.013, Label: 0
+  Distance: 2.024, Label: 0
+  Distance: 2.053, Label: 1
+
+--- Test Instance 6 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.003, Label: 1
+  Distance: 1.003, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.542, Label: 0
+  Distance: 1.739, Label: 1
+  Distance: 1.747, Label: 1
+  Distance: 1.774, Label: 1
+  Distance: 1.792, Label: 1
+  Distance: 1.814, Label: 1
+  Distance: 2.013, Label: 1
+  Distance: 2.024, Label: 0
+
+--- Test Instance 7 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.003, Label: 0
+  Distance: 1.423, Label: 1
+  Distance: 1.423, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.466, Label: 1
+  Distance: 1.488, Label: 1
+  Distance: 1.747, Label: 1
+  Distance: 1.759, Label: 1
+  Distance: 1.774, Label: 0
+  Distance: 1.814, Label: 0
+  Distance: 2.001, Label: 0
+
+--- Test Instance 8 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.416, Label: 1
+  Distance: 1.433, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.513, Label: 0
+  Distance: 1.739, Label: 1
+  Distance: 1.774, Label: 1
+  Distance: 1.792, Label: 0
+  Distance: 1.792, Label: 0
+  Distance: 2.001, Label: 1
+  Distance: 2.013, Label: 1
+
+--- Test Instance 9 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.416, Label: 0
+  Distance: 1.423, Label: 1
+  Distance: 1.423, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.542, Label: 0
+  Distance: 1.734, Label: 1
+  Distance: 1.747, Label: 0
+  Distance: 1.792, Label: 1
+  Distance: 1.814, Label: 0
+  Distance: 2.013, Label: 1
+
+--- Test Instance 10 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.071, Label: 1
+  Distance: 1.101, Label: 1
+  Distance: 1.447, Label: 0
+  Distance: 1.447, Label: 0
+  Distance: 1.734, Label: 1
+  Distance: 1.734, Label: 1
+  Distance: 1.739, Label: 0
+  Distance: 1.739, Label: 1
+  Distance: 1.747, Label: 1
+  Distance: 1.747, Label: 1
+  Distance: 2.071, Label: 1
+
+--- Test Instance 11 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.416, Label: 1
+  Distance: 1.423, Label: 1
+  Distance: 1.433, Label: 0
+  Distance: 1.447, Label: 1
+  Distance: 1.734, Label: 1
+  Distance: 1.747, Label: 0
+  Distance: 1.774, Label: 0
+  Distance: 1.865, Label: 0
+  Distance: 2.006, Label: 1
+  Distance: 2.053, Label: 1
+  Distance: 2.071, Label: 1
+
+--- Test Instance 12 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.012, Label: 0
+  Distance: 1.416, Label: 1
+  Distance: 1.447, Label: 0
+  Distance: 1.466, Label: 1
+  Distance: 1.542, Label: 1
+  Distance: 1.739, Label: 1
+  Distance: 1.792, Label: 0
+  Distance: 1.865, Label: 1
+  Distance: 1.895, Label: 0
+  Distance: 2.001, Label: 1
+  Distance: 2.013, Label: 1
+
+--- Test Instance 13 ---
+Actual Label: 1, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.262, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.488, Label: 1
+  Distance: 1.542, Label: 1
+  Distance: 1.689, Label: 0
+  Distance: 1.747, Label: 1
+  Distance: 1.814, Label: 0
+  Distance: 1.928, Label: 0
+  Distance: 2.001, Label: 1
+  Distance: 2.006, Label: 1
+  Distance: 2.037, Label: 0
+
+--- Test Instance 14 ---
+Actual Label: 0, Predicted Label: 1
+Neighbors (distance, label):
+  Distance: 1.012, Label: 1
+  Distance: 1.262, Label: 1
+  Distance: 1.447, Label: 1
+  Distance: 1.542, Label: 0
+  Distance: 1.747, Label: 1
+  Distance: 1.792, Label: 0
+  Distance: 1.814, Label: 1
+  Distance: 1.865, Label: 1
+  Distance: 2.172, Label: 1
+  Distance: 2.203, Label: 0
+  Distance: 2.237, Label: 1
+
+
+LOOCV Accuracy: 0.64
