@@ -177,7 +177,7 @@ if __name__ == "__main__":
         dataset_log.write("===== Dataset =====\n\n")
         dataset_log.write(dataset.to_string(index=False))
 
-    k = 14
+    k = 3
 
     distance_metric = euclidean_distance
     log_without_loocv = "Output/knn_without_loocv_log.txt"

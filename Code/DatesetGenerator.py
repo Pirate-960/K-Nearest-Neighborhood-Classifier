@@ -22,10 +22,10 @@ def generate_large_dataset(file_path, num_records=1000):
         }
         data.append(record)
 
-    # Create a DataFrame and save to CSV
+    # Create a DataFrame and save to JSON
     df = pd.DataFrame(data)
-    df.to_csv(file_path, index=False)
+    df.to_json(file_path, orient='records', indent=4)
     print(f"Large dataset with {num_records} records saved to {file_path}")
 
 # Generate and save the dataset
-generate_large_dataset("Dataset/large_play_tennis_dataset.csv", num_records=1000)
+generate_large_dataset("Dataset/large_play_tennis_dataset.json", num_records=1000)
