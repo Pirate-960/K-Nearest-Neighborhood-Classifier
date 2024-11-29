@@ -1,0 +1,42 @@
+===== k-NN Classification (standard) =====
+k: 3, Distance Metric: manhattan_distance
+
+--------------------------------------------------
+| Instance |   Actual   |   Predicted  |  Correct |
+--------------------------------------------------
+|   1      |   No       |   No         |  True    |
+|   2      |   No       |   No         |  True    |
+|   3      |   Yes      |   Yes        |  True    |
+|   4      |   Yes      |   Yes        |  True    |
+|   5      |   Yes      |   Yes        |  True    |
+|   6      |   No       |   Yes        |  False   |
+|   7      |   Yes      |   Yes        |  True    |
+|   8      |   No       |   Yes        |  False   |
+|   9      |   Yes      |   Yes        |  True    |
+|   10     |   Yes      |   Yes        |  True    |
+|   11     |   Yes      |   Yes        |  True    |
+|   12     |   Yes      |   Yes        |  True    |
+|   13     |   Yes      |   Yes        |  True    |
+|   14     |   No       |   Yes        |  False   |
+--------------------------------------------------
+Overall Accuracy: 0.79
+
+--------------------------------------------------
+Confusion Matrix:
+--------------------------------------------------
+                   Predicted
+            |   Yes    |   No     |
+------------|----------|----------|
+Actual Yes  |   9      |   0      |
+Actual No   |   3      |   2      |
+--------------------------------------------------
+
+--------------------------------------------------
+True Positives (TP):  9
+True Negatives (TN):  2
+False Positives (FP): 3
+False Negatives (FN): 0
+Precision: 0.75
+Recall: 1.00
+F1 Score: 0.86
+--------------------------------------------------
