@@ -1,27 +1,27 @@
 ===== k-NN Classification (loocv) =====
-k: 3, Distance Metric: euclidean_distance
+k: 3, Distance Metric: manhattan_distance
 
 --------------------------------------------------
-| Instance |   Actual   | Predicted  | Correct  |
+| Instance |   Actual   |   Predicted  |  Correct |
 --------------------------------------------------
-|    1     |   No      |   No      |   True  |
-|    2     |   No      |   Yes     |   False |
-|    3     |   Yes     |   No      |   False |
-|    4     |   Yes     |   Yes     |   True  |
-|    5     |   Yes     |   Yes     |   True  |
-|    6     |   No      |   Yes     |   False |
-|    7     |   Yes     |   Yes     |   True  |
-|    8     |   No      |   Yes     |   False |
-|    9     |   Yes     |   Yes     |   True  |
-|    10    |   Yes     |   Yes     |   True  |
-|    11    |   Yes     |   Yes     |   True  |
-|    12    |   Yes     |   No      |   False |
-|    13    |   Yes     |   Yes     |   True  |
-|    14    |   No      |   Yes     |   False |
+|   1      |   No       |   No         |  True    |
+|   2      |   No       |   Yes        |  False   |
+|   3      |   Yes      |   No         |  False   |
+|   4      |   Yes      |   Yes        |  True    |
+|   5      |   Yes      |   Yes        |  True    |
+|   6      |   No       |   Yes        |  False   |
+|   7      |   Yes      |   Yes        |  True    |
+|   8      |   No       |   Yes        |  False   |
+|   9      |   Yes      |   Yes        |  True    |
+|   10     |   Yes      |   Yes        |  True    |
+|   11     |   Yes      |   Yes        |  True    |
+|   12     |   Yes      |   No         |  False   |
+|   13     |   Yes      |   Yes        |  True    |
+|   14     |   No       |   Yes        |  False   |
 --------------------------------------------------
-
 Overall Accuracy: 0.57
 
+--------------------------------------------------
 Confusion Matrix:
 --------------------------------------------------
                    Predicted
