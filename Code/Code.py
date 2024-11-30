@@ -116,7 +116,7 @@ if __name__ == "__main__":
     labels = labels.values      # Convert to NumPy array for faster computation
     
     # Parameters
-    k = 3
+    k = int(input("Enter the value of k: "))
     distance_metric = euclidean_distance  # Choose euclidean_distance or manhattan_distance
 
     # Solution 1: Without Leave-One-Out Cross-Validation
