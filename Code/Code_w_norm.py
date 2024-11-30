@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 import json
-
+import os
 
 # Helper Functions
 def euclidean_distance(x1, x2):
@@ -99,7 +99,6 @@ def evaluate_knn(features, labels, k, distance_metric, log_file, mode="standard"
         recall = tp / (tp + fn) if tp + fn > 0 else 0
         f1_score = (2 * precision * recall) / (precision + recall) if precision + recall > 0 else 0
 
-        # Print and log detailed results
         # Print and log detailed results
         header = "--------------------------------------------------\n"
         column_headers = "| Instance |   Actual   |   Predicted  |  Correct |\n"

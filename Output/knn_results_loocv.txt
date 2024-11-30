@@ -20,5 +20,23 @@ k: 3, Distance Metric: euclidean_distance
 |   14     |   No       |   Yes        |  False   |
 --------------------------------------------------
 Overall Accuracy: 0.57
-Precision: 0.64, Recall: 0.78, F1 Score: 0.70
+
+--------------------------------------------------
+Confusion Matrix:
+--------------------------------------------------
+                   Predicted
+            |   Yes    |   No     |
+------------|----------|----------|
+Actual Yes  |   7      |   2      |
+Actual No   |   4      |   1      |
+--------------------------------------------------
+
+--------------------------------------------------
+True Positives (TP):  7
+True Negatives (TN):  1
+False Positives (FP): 4
+False Negatives (FN): 2
+Precision: 0.64
+Recall: 0.78
+F1 Score: 0.70
 --------------------------------------------------

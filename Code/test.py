@@ -40,7 +40,7 @@ def encode_categorical_features(df):
     target_encoded = target.map({'Yes': 1, 'No': 0})
     return features_encoded, target_encoded
 
-
+# ---------- check this part ----------
 def save_training_data_to_json(features, labels, file_path):
     """Save training data to a JSON file."""
     training_data = {"features": features.tolist(), "labels": labels.tolist()}
@@ -67,6 +67,7 @@ def update_training_data(new_features, new_labels, file_path):
         updated_features = new_features
         updated_labels = new_labels
     save_training_data_to_json(updated_features, updated_labels, file_path)
+# ---------- check this part ----------
 
 
 # Core k-NN Implementation
@@ -79,7 +80,6 @@ def knn_predict(test_instance, training_data, training_labels, k, distance_metri
     k_nearest_labels = [label for _, label in distances[:k]]
     most_common = Counter(k_nearest_labels).most_common(1)[0][0]
     return most_common
-
 
 def evaluate_knn(features, labels, k, distance_metric, log_file, mode="standard"):
     correct_predictions = 0
@@ -126,25 +126,67 @@ def evaluate_knn(features, labels, k, distance_metric, log_file, mode="standard"
         recall = tp / (tp + fn) if tp + fn > 0 else 0
         f1_score = (2 * precision * recall) / (precision + recall) if precision + recall > 0 else 0
 
-        # Log and print detailed results
-        log.write("--------------------------------------------------\n")
-        log.write("| Instance |   Actual   |   Predicted  |  Correct |\n")
-        log.write("--------------------------------------------------\n")
+        # Print and log detailed results
+        header = "--------------------------------------------------\n"
+        column_headers = "| Instance |   Actual   |   Predicted  |  Correct |\n"
+        divider = "--------------------------------------------------\n"
+
+        # Print header
+        print(header + column_headers + divider, end="")
+        log.write(header + column_headers + divider)
 
         for idx, actual, predicted, correct in results:
             actual_str = "Yes" if actual == 1 else "No"
             predicted_str = "Yes" if predicted == 1 else "No"
             correct_str = "True" if correct else "False"
             row = f"|   {idx:<6} |   {actual_str:<8} |   {predicted_str:<10} |  {correct_str:<7} |\n"
+            print(row, end="")
             log.write(row)
 
-        log.write("--------------------------------------------------\n")
-        log.write(f"Overall Accuracy: {accuracy:.2f}\n")
-        log.write(f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1 Score: {f1_score:.2f}\n")
-        log.write("--------------------------------------------------\n")
+        # Print and log footer
+        print(divider)
+        log.write(divider)
 
-        print(log.getvalue())
+        print(f"Overall Accuracy: {accuracy:.2f}\n\n")
+        log.write(f"Overall Accuracy: {accuracy:.2f}\n\n")
 
+        print("--------------------------------------------------")
+        print("Confusion Matrix:")
+        print("--------------------------------------------------")
+        print("                   Predicted")
+        print("            |   Yes    |   No     |")
+        print("------------|----------|----------|")
+        print(f"Actual Yes  |   {tp:<6} |   {fn:<6} |")
+        print(f"Actual No   |   {fp:<6} |   {tn:<6} |")
+        print("--------------------------------------------------")
+        print("--------------------------------------------------")
+        print(f"True Positives (TP):  {tp}")
+        print(f"True Negatives (TN):  {tn}")
+        print(f"False Positives (FP): {fp}")
+        print(f"False Negatives (FN): {fn}")
+        print(f"Precision: {precision:.2f}")
+        print(f"Recall: {recall:.2f}")
+        print(f"F1 Score: {f1_score:.2f}")
+        print("--------------------------------------------------")
+
+        log.write("--------------------------------------------------\n")
+        log.write("Confusion Matrix:\n")
+        log.write("--------------------------------------------------\n")
+        log.write("                   Predicted\n")
+        log.write("            |   Yes    |   No     |\n")
+        log.write("------------|----------|----------|\n")
+        log.write(f"Actual Yes  |   {tp:<6} |   {fn:<6} |\n")
+        log.write(f"Actual No   |   {fp:<6} |   {tn:<6} |\n")
+        log.write("--------------------------------------------------\n\n")
+        log.write("--------------------------------------------------\n")
+        log.write(f"True Positives (TP):  {tp}\n")
+        log.write(f"True Negatives (TN):  {tn}\n")
+        log.write(f"False Positives (FP): {fp}\n")
+        log.write(f"False Negatives (FN): {fn}\n")
+        log.write(f"Precision: {precision:.2f}\n")
+        log.write(f"Recall: {recall:.2f}\n")
+        log.write(f"F1 Score: {f1_score:.2f}\n")
+        log.write("--------------------------------------------------\n")
 
 # Classify a Single Instance
 def classify_single_instance(instance_json_path, model_file_path, k, distance_metric):
