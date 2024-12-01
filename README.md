@@ -42,7 +42,7 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/pirate-960/knn-classification-project.git
+   git clone https://github.com/Pirate-960/knn-classification-project.git
    cd knn-classification-project
    ```
 
@@ -116,5 +116,3 @@ The classifier is evaluated using metrics such as accuracy, precision, recall, a
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Let me know if you'd like to adjust any sections or add further details!
