@@ -58,7 +58,7 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
 
 3. **Directory Setup**:
    - Place the dataset in the `Dataset` folder.
-   - Ensure the scripts are in the main project directory.
+   - Ensure the scripts are in the main project directory (Code Directory).
 
 ## Usage
 1. **Run the Classifier**:
