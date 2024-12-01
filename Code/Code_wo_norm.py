@@ -97,27 +97,63 @@ def print_and_save_dataset(dataset, output_path):
         dataset_file.write("\n")
 
 
-def encode_categorical_features(df):
+def encode_categorical_features_with_instances(df, output_json_path="Output/encoding_mapping_with_instances.json"):
     """
-    Encode categorical features using one-hot encoding and map target variable.
+    Encode categorical features and save encoding mappings along with instance encodings to a JSON file.
     
     Args:
-        df (pandas.DataFrame): Input dataframe with categorical features
+        df (pandas.DataFrame): Input dataframe with categorical features.
+        output_json_path (str): Path to save the encoding mapping and instances JSON file.
     
     Returns:
-        tuple: 
-            - features_encoded (pandas.DataFrame): One-hot encoded features
-            - target_encoded (pandas.Series): Binary encoded target variable
+        tuple:
+            - features_encoded (pandas.DataFrame): One-hot encoded features.
+            - target_encoded (pandas.Series): Binary encoded target variable.
     """
     # Separate features and target
     features = df.drop(columns=['PlayTennis'])
     target = df['PlayTennis']
     
+    # Initialize a dictionary to hold encoding mappings and instances
+    encoding_data = {
+        "mapping": {},
+        "instances": []
+    }
+    
+    # Generate one-hot encoding for features
     # One-hot encode categorical features, dropping first column to avoid multicollinearity
     features_encoded = pd.get_dummies(features, drop_first=True)
     
-    # Map target variable to binary (Yes: 1, No: 0)
-    target_encoded = target.map({'Yes': 1, 'No': 0})
+    # Map and save categorical feature encodings
+    for column in features.select_dtypes(include=["object"]).columns:
+        unique_values = features[column].unique()
+        mapping = {value: idx for idx, value in enumerate(unique_values)}
+        encoding_data["mapping"][column] = mapping
+    
+    # Map and save target variable encoding
+    target_mapping = {'Yes': 1, 'No': 0}
+    encoding_data["mapping"]["PlayTennis"] = target_mapping
+    target_encoded = target.map(target_mapping)
+    
+    # Save encoded instances
+    for idx, row in df.iterrows():
+        encoded_instance = {}
+        for column in features.columns:
+            if column in encoding_data["mapping"]:
+                encoded_instance[column] = encoding_data["mapping"][column][row[column]]
+            else:
+                encoded_instance[column] = row[column]  # Numerical or non-encoded column
+        encoded_instance["PlayTennis"] = target_mapping[row["PlayTennis"]]
+        encoding_data["instances"].append(encoded_instance)
+    
+    # Save the encoding data to a JSON file
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    with open(output_json_path, "w") as f:
+        json.dump(encoding_data, f, indent=4)
+    
+    # Print the encoding data for reference
+    print("\n=== Encoding Data ===")
+    print(json.dumps(encoding_data, indent=4))
     
     return features_encoded, target_encoded
 
@@ -359,7 +395,9 @@ if __name__ == "__main__":
     print_and_save_dataset(dataset, dataset_output_path)
 
     # Encode categorical features without normalization
-    features, labels = encode_categorical_features(dataset)
+    encoding_mapping_path = "Output/No Normalization/encoding_mapping_with_instances.json"
+    features, labels = encode_categorical_features_with_instances(dataset, encoding_mapping_path)
+    
     features = features.values  # Convert to NumPy array for computation
     labels = labels.values  # Convert to NumPy array for computation
 
