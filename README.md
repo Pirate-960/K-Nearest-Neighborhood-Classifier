@@ -42,7 +42,7 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Pirate-960/knn-classification-project.git
+   git clone https://github.com/Pirate-960/K-Nearest-Neighborhood-Classifier
    cd knn-classification-project
    ```
 
