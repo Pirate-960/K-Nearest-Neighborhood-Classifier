@@ -45,24 +45,37 @@ def encode_categorical_features(df):
 # Core k-NN Implementation
 def knn_predict(test_instance, training_data, training_labels, k, distance_metric, calculations_log):
     distances = []
-    calculations_log.write("\n--- Distance Calculations for Test Instance ---\n")
-    for i in range(len(training_data)):
-        distance = distance_metric(test_instance, training_data[i])
-        distances.append((distance, training_labels[i], i + 1))
-        calculations_log.write(f"Distance to Neighbor {i + 1}: {distance:.4f}\n")
+    calculation_title = f"\n=== Distance Calculations for Test Instance ==="
+    print(calculation_title)
+    calculations_log.write(calculation_title + "\n")
+    print("-" * 50)
+    calculations_log.write("-" * 50 + "\n")
 
+    # Compute distances to all training instances
+    for i, training_instance in enumerate(training_data):
+        distance = distance_metric(test_instance, training_instance)
+        distances.append((distance, training_labels[i], i + 1))
+        calculation_detail = f"Neighbor {i + 1}: Distance = {distance:.4f} -> Label = {training_labels[i]}"
+        print(calculation_detail)
+        calculations_log.write(calculation_detail + "\n")
+
+    # Sort distances and select k-nearest neighbors
     distances.sort(key=lambda x: x[0])
     k_nearest_neighbors = distances[:k]
-    k_nearest_labels = [label for _, label, _ in k_nearest_neighbors]
 
-    # Log and print the nearest neighbors
-    calculations_log.write("\n--- Selected Nearest Neighbors ---\n")
-    print("\n--- Selected Nearest Neighbors ---")
-    for distance, label, idx in k_nearest_neighbors:
-        neighbor_info = f"Neighbor {idx} - Distance: {distance:.4f}, Label: {label}"
+    neighbor_title = "\n--- Selected Nearest Neighbors (Top k) ---"
+    print(neighbor_title)
+    calculations_log.write(neighbor_title + "\n")
+    print("-" * 50)
+    calculations_log.write("-" * 50 + "\n")
+
+    for rank, (distance, label, idx) in enumerate(k_nearest_neighbors, 1):
+        neighbor_info = f"Rank {rank}: Neighbor {idx} - Distance = {distance:.4f} -> Label = {label}"
         print(neighbor_info)
         calculations_log.write(neighbor_info + "\n")
-    
+
+    # Determine the most common label among k-nearest neighbors
+    k_nearest_labels = [label for _, label, _ in k_nearest_neighbors]
     most_common = Counter(k_nearest_labels).most_common(1)[0][0]
     return most_common
 
