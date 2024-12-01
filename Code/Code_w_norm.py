@@ -56,16 +56,11 @@ def cosine_similarity(x1, x2):
     return 1 - (dot_product / magnitude) if magnitude != 0 else 1
 
 
-import pandas as pd
-import os
-from tabulate import tabulate
-from termcolor import colored
-
 def normalize_features(features, output_file="Output/Normalization/normalized_features.csv"):
     """
     Normalize features to a 0-1 range using min-max normalization.
     Converts boolean columns to integers and scales all numeric features.
-    Prints results with color-coded highlights and saves to an output file.
+    Prints the entire dataset and saves to an output file.
     
     Args:
         features (pandas.DataFrame): Input feature dataframe
@@ -80,9 +75,9 @@ def normalize_features(features, output_file="Output/Normalization/normalized_fe
     # Step 2: Perform min-max normalization
     normalized_features = (features - features.min()) / (features.max() - features.min())
     
-    # Step 3: Color-coded console output
-    console_output = tabulate(normalized_features.head(), headers="keys", tablefmt="fancy_grid", showindex=False)
-    print(colored("\n=== Normalized Features (Preview) ===", "cyan", attrs=["bold"]))
+    # Step 3: Console output - Print the entire table
+    console_output = tabulate(normalized_features, headers="keys", tablefmt="fancy_grid", showindex=True)
+    print(colored("\n###================================================### Normalized Features ###================================================###", "cyan", attrs=["bold"]))
     print(console_output)
     print(colored("\nFull dataset saved to output file.", "green"))
     
