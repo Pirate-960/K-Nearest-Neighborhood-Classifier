@@ -21,7 +21,6 @@ Rank 1: Neighbor 1 - Distance = 1.0030 -> Label = 0
 Rank 2: Neighbor 2 - Distance = 1.0118 -> Label = 1
 Rank 3: Neighbor 7 - Distance = 1.5133 -> Label = 0
 
-Distance to Neighbor 2: 1.4163
 === Distance Calculations for Test Instance ===
 --------------------------------------------------
 Neighbor 1: Distance = 1.0030 -> Label = 0
