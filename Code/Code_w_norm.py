@@ -357,7 +357,7 @@ if __name__ == "__main__":
     dataset = load_dataset_from_json(json_path)
 
     # Save and display dataset
-    dataset_output_path = "Output/Dataset.txt"
+    dataset_output_path = "Output/Normalization/Dataset.txt"
     print_and_save_dataset(dataset, dataset_output_path)
 
     # Encode categorical features and normalize them
@@ -366,8 +366,8 @@ if __name__ == "__main__":
     labels = labels.values  # Convert to NumPy array for computation
 
     # Set up output file paths for results and calculations
-    results_file = f"Output/knn_results_{mode}.txt"
-    calculations_file = f"Output/knn_calculations_{mode}.txt"
+    results_file = f"Output/Normalization/knn_results_{mode}.txt"
+    calculations_file = f"Output/Normalization/knn_calculations_{mode}.txt"
 
     # Evaluate k-NN classifier with selected parameters
     evaluate_knn(features, labels, k, distance_metric, results_file, calculations_file, mode)

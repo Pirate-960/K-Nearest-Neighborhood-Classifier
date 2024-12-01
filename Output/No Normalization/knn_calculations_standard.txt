@@ -1,0 +1,322 @@
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 0.0000 -> Label = 0
+Neighbor 2: Distance = 1.4142 -> Label = 0
+Neighbor 3: Distance = 2.2361 -> Label = 1
+Neighbor 4: Distance = 3.6056 -> Label = 1
+Neighbor 5: Distance = 4.4721 -> Label = 1
+Neighbor 6: Distance = 5.4772 -> Label = 0
+Neighbor 7: Distance = 6.3246 -> Label = 1
+Neighbor 8: Distance = 7.1414 -> Label = 0
+Neighbor 9: Distance = 8.1240 -> Label = 1
+Neighbor 10: Distance = 9.2736 -> Label = 1
+Neighbor 11: Distance = 10.1980 -> Label = 1
+Neighbor 12: Distance = 11.1803 -> Label = 1
+Neighbor 13: Distance = 12.0830 -> Label = 1
+Neighbor 14: Distance = 13.1909 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 1 - Distance = 0.0000 -> Label = 0
+Rank 2: Neighbor 2 - Distance = 1.4142 -> Label = 0
+Rank 3: Neighbor 3 - Distance = 2.2361 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 1.4142 -> Label = 0
+Neighbor 2: Distance = 0.0000 -> Label = 0
+Neighbor 3: Distance = 1.7321 -> Label = 1
+Neighbor 4: Distance = 3.0000 -> Label = 1
+Neighbor 5: Distance = 3.7417 -> Label = 1
+Neighbor 6: Distance = 4.4721 -> Label = 0
+Neighbor 7: Distance = 5.2915 -> Label = 1
+Neighbor 8: Distance = 6.2450 -> Label = 0
+Neighbor 9: Distance = 7.2111 -> Label = 1
+Neighbor 10: Distance = 8.3666 -> Label = 1
+Neighbor 11: Distance = 9.1652 -> Label = 1
+Neighbor 12: Distance = 10.1489 -> Label = 1
+Neighbor 13: Distance = 11.1355 -> Label = 1
+Neighbor 14: Distance = 12.1655 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 2 - Distance = 0.0000 -> Label = 0
+Rank 2: Neighbor 1 - Distance = 1.4142 -> Label = 0
+Rank 3: Neighbor 3 - Distance = 1.7321 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 2.2361 -> Label = 0
+Neighbor 2: Distance = 1.7321 -> Label = 0
+Neighbor 3: Distance = 0.0000 -> Label = 1
+Neighbor 4: Distance = 2.0000 -> Label = 1
+Neighbor 5: Distance = 2.6458 -> Label = 1
+Neighbor 6: Distance = 3.6056 -> Label = 0
+Neighbor 7: Distance = 4.3589 -> Label = 1
+Neighbor 8: Distance = 5.2915 -> Label = 0
+Neighbor 9: Distance = 6.2450 -> Label = 1
+Neighbor 10: Distance = 7.2801 -> Label = 1
+Neighbor 11: Distance = 8.3066 -> Label = 1
+Neighbor 12: Distance = 9.1652 -> Label = 1
+Neighbor 13: Distance = 10.0499 -> Label = 1
+Neighbor 14: Distance = 11.1803 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 3 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 2 - Distance = 1.7321 -> Label = 0
+Rank 3: Neighbor 4 - Distance = 2.0000 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 3.6056 -> Label = 0
+Neighbor 2: Distance = 3.0000 -> Label = 0
+Neighbor 3: Distance = 2.0000 -> Label = 1
+Neighbor 4: Distance = 0.0000 -> Label = 1
+Neighbor 5: Distance = 1.7321 -> Label = 1
+Neighbor 6: Distance = 2.6458 -> Label = 0
+Neighbor 7: Distance = 3.6056 -> Label = 1
+Neighbor 8: Distance = 4.2426 -> Label = 0
+Neighbor 9: Distance = 5.3852 -> Label = 1
+Neighbor 10: Distance = 6.0828 -> Label = 1
+Neighbor 11: Distance = 7.2801 -> Label = 1
+Neighbor 12: Distance = 8.1240 -> Label = 1
+Neighbor 13: Distance = 9.2195 -> Label = 1
+Neighbor 14: Distance = 10.0499 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 4 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 5 - Distance = 1.7321 -> Label = 1
+Rank 3: Neighbor 3 - Distance = 2.0000 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 4.4721 -> Label = 0
+Neighbor 2: Distance = 3.7417 -> Label = 0
+Neighbor 3: Distance = 2.6458 -> Label = 1
+Neighbor 4: Distance = 1.7321 -> Label = 1
+Neighbor 5: Distance = 0.0000 -> Label = 1
+Neighbor 6: Distance = 1.4142 -> Label = 0
+Neighbor 7: Distance = 2.4495 -> Label = 1
+Neighbor 8: Distance = 3.6056 -> Label = 0
+Neighbor 9: Distance = 4.2426 -> Label = 1
+Neighbor 10: Distance = 5.0990 -> Label = 1
+Neighbor 11: Distance = 6.3246 -> Label = 1
+Neighbor 12: Distance = 7.2801 -> Label = 1
+Neighbor 13: Distance = 8.1240 -> Label = 1
+Neighbor 14: Distance = 9.1652 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 5 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 6 - Distance = 1.4142 -> Label = 0
+Rank 3: Neighbor 4 - Distance = 1.7321 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 5.4772 -> Label = 0
+Neighbor 2: Distance = 4.4721 -> Label = 0
+Neighbor 3: Distance = 3.6056 -> Label = 1
+Neighbor 4: Distance = 2.6458 -> Label = 1
+Neighbor 5: Distance = 1.4142 -> Label = 1
+Neighbor 6: Distance = 0.0000 -> Label = 0
+Neighbor 7: Distance = 1.4142 -> Label = 1
+Neighbor 8: Distance = 3.0000 -> Label = 0
+Neighbor 9: Distance = 3.4641 -> Label = 1
+Neighbor 10: Distance = 4.2426 -> Label = 1
+Neighbor 11: Distance = 5.2915 -> Label = 1
+Neighbor 12: Distance = 6.2450 -> Label = 1
+Neighbor 13: Distance = 7.2111 -> Label = 1
+Neighbor 14: Distance = 8.1240 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 6 - Distance = 0.0000 -> Label = 0
+Rank 2: Neighbor 5 - Distance = 1.4142 -> Label = 1
+Rank 3: Neighbor 7 - Distance = 1.4142 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 6.3246 -> Label = 0
+Neighbor 2: Distance = 5.2915 -> Label = 0
+Neighbor 3: Distance = 4.3589 -> Label = 1
+Neighbor 4: Distance = 3.6056 -> Label = 1
+Neighbor 5: Distance = 2.4495 -> Label = 1
+Neighbor 6: Distance = 1.4142 -> Label = 0
+Neighbor 7: Distance = 0.0000 -> Label = 1
+Neighbor 8: Distance = 2.2361 -> Label = 0
+Neighbor 9: Distance = 2.4495 -> Label = 1
+Neighbor 10: Distance = 3.4641 -> Label = 1
+Neighbor 11: Distance = 4.2426 -> Label = 1
+Neighbor 12: Distance = 5.1962 -> Label = 1
+Neighbor 13: Distance = 6.1644 -> Label = 1
+Neighbor 14: Distance = 7.2111 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 7 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 6 - Distance = 1.4142 -> Label = 0
+Rank 3: Neighbor 8 - Distance = 2.2361 -> Label = 0
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 7.1414 -> Label = 0
+Neighbor 2: Distance = 6.2450 -> Label = 0
+Neighbor 3: Distance = 5.2915 -> Label = 1
+Neighbor 4: Distance = 4.2426 -> Label = 1
+Neighbor 5: Distance = 3.6056 -> Label = 1
+Neighbor 6: Distance = 3.0000 -> Label = 0
+Neighbor 7: Distance = 2.2361 -> Label = 1
+Neighbor 8: Distance = 0.0000 -> Label = 0
+Neighbor 9: Distance = 1.7321 -> Label = 1
+Neighbor 10: Distance = 2.6458 -> Label = 1
+Neighbor 11: Distance = 3.3166 -> Label = 1
+Neighbor 12: Distance = 4.2426 -> Label = 1
+Neighbor 13: Distance = 5.3852 -> Label = 1
+Neighbor 14: Distance = 6.2450 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 8 - Distance = 0.0000 -> Label = 0
+Rank 2: Neighbor 9 - Distance = 1.7321 -> Label = 1
+Rank 3: Neighbor 7 - Distance = 2.2361 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 8.1240 -> Label = 0
+Neighbor 2: Distance = 7.2111 -> Label = 0
+Neighbor 3: Distance = 6.2450 -> Label = 1
+Neighbor 4: Distance = 5.3852 -> Label = 1
+Neighbor 5: Distance = 4.2426 -> Label = 1
+Neighbor 6: Distance = 3.4641 -> Label = 0
+Neighbor 7: Distance = 2.4495 -> Label = 1
+Neighbor 8: Distance = 1.7321 -> Label = 0
+Neighbor 9: Distance = 0.0000 -> Label = 1
+Neighbor 10: Distance = 2.0000 -> Label = 1
+Neighbor 11: Distance = 2.4495 -> Label = 1
+Neighbor 12: Distance = 3.6056 -> Label = 1
+Neighbor 13: Distance = 4.2426 -> Label = 1
+Neighbor 14: Distance = 5.4772 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 9 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 8 - Distance = 1.7321 -> Label = 0
+Rank 3: Neighbor 10 - Distance = 2.0000 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 9.2736 -> Label = 0
+Neighbor 2: Distance = 8.3666 -> Label = 0
+Neighbor 3: Distance = 7.2801 -> Label = 1
+Neighbor 4: Distance = 6.0828 -> Label = 1
+Neighbor 5: Distance = 5.0990 -> Label = 1
+Neighbor 6: Distance = 4.2426 -> Label = 0
+Neighbor 7: Distance = 3.4641 -> Label = 1
+Neighbor 8: Distance = 2.6458 -> Label = 0
+Neighbor 9: Distance = 2.0000 -> Label = 1
+Neighbor 10: Distance = 0.0000 -> Label = 1
+Neighbor 11: Distance = 2.0000 -> Label = 1
+Neighbor 12: Distance = 2.6458 -> Label = 1
+Neighbor 13: Distance = 3.4641 -> Label = 1
+Neighbor 14: Distance = 4.2426 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 10 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 9 - Distance = 2.0000 -> Label = 1
+Rank 3: Neighbor 11 - Distance = 2.0000 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 10.1980 -> Label = 0
+Neighbor 2: Distance = 9.1652 -> Label = 0
+Neighbor 3: Distance = 8.3066 -> Label = 1
+Neighbor 4: Distance = 7.2801 -> Label = 1
+Neighbor 5: Distance = 6.3246 -> Label = 1
+Neighbor 6: Distance = 5.2915 -> Label = 0
+Neighbor 7: Distance = 4.2426 -> Label = 1
+Neighbor 8: Distance = 3.3166 -> Label = 0
+Neighbor 9: Distance = 2.4495 -> Label = 1
+Neighbor 10: Distance = 2.0000 -> Label = 1
+Neighbor 11: Distance = 0.0000 -> Label = 1
+Neighbor 12: Distance = 1.7321 -> Label = 1
+Neighbor 13: Distance = 2.8284 -> Label = 1
+Neighbor 14: Distance = 3.4641 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 11 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 12 - Distance = 1.7321 -> Label = 1
+Rank 3: Neighbor 10 - Distance = 2.0000 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 11.1803 -> Label = 0
+Neighbor 2: Distance = 10.1489 -> Label = 0
+Neighbor 3: Distance = 9.1652 -> Label = 1
+Neighbor 4: Distance = 8.1240 -> Label = 1
+Neighbor 5: Distance = 7.2801 -> Label = 1
+Neighbor 6: Distance = 6.2450 -> Label = 0
+Neighbor 7: Distance = 5.1962 -> Label = 1
+Neighbor 8: Distance = 4.2426 -> Label = 0
+Neighbor 9: Distance = 3.6056 -> Label = 1
+Neighbor 10: Distance = 2.6458 -> Label = 1
+Neighbor 11: Distance = 1.7321 -> Label = 1
+Neighbor 12: Distance = 0.0000 -> Label = 1
+Neighbor 13: Distance = 2.2361 -> Label = 1
+Neighbor 14: Distance = 2.2361 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 12 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 11 - Distance = 1.7321 -> Label = 1
+Rank 3: Neighbor 13 - Distance = 2.2361 -> Label = 1
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 12.0830 -> Label = 0
+Neighbor 2: Distance = 11.1355 -> Label = 0
+Neighbor 3: Distance = 10.0499 -> Label = 1
+Neighbor 4: Distance = 9.2195 -> Label = 1
+Neighbor 5: Distance = 8.1240 -> Label = 1
+Neighbor 6: Distance = 7.2111 -> Label = 0
+Neighbor 7: Distance = 6.1644 -> Label = 1
+Neighbor 8: Distance = 5.3852 -> Label = 0
+Neighbor 9: Distance = 4.2426 -> Label = 1
+Neighbor 10: Distance = 3.4641 -> Label = 1
+Neighbor 11: Distance = 2.8284 -> Label = 1
+Neighbor 12: Distance = 2.2361 -> Label = 1
+Neighbor 13: Distance = 0.0000 -> Label = 1
+Neighbor 14: Distance = 2.4495 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 13 - Distance = 0.0000 -> Label = 1
+Rank 2: Neighbor 12 - Distance = 2.2361 -> Label = 1
+Rank 3: Neighbor 14 - Distance = 2.4495 -> Label = 0
+
+=== Distance Calculations for Test Instance ===
+--------------------------------------------------
+Neighbor 1: Distance = 13.1909 -> Label = 0
+Neighbor 2: Distance = 12.1655 -> Label = 0
+Neighbor 3: Distance = 11.1803 -> Label = 1
+Neighbor 4: Distance = 10.0499 -> Label = 1
+Neighbor 5: Distance = 9.1652 -> Label = 1
+Neighbor 6: Distance = 8.1240 -> Label = 0
+Neighbor 7: Distance = 7.2111 -> Label = 1
+Neighbor 8: Distance = 6.2450 -> Label = 0
+Neighbor 9: Distance = 5.4772 -> Label = 1
+Neighbor 10: Distance = 4.2426 -> Label = 1
+Neighbor 11: Distance = 3.4641 -> Label = 1
+Neighbor 12: Distance = 2.2361 -> Label = 1
+Neighbor 13: Distance = 2.4495 -> Label = 1
+Neighbor 14: Distance = 0.0000 -> Label = 0
+
+--- Selected Nearest Neighbors (Top k) ---
+--------------------------------------------------
+Rank 1: Neighbor 14 - Distance = 0.0000 -> Label = 0
+Rank 2: Neighbor 12 - Distance = 2.2361 -> Label = 1
+Rank 3: Neighbor 13 - Distance = 2.4495 -> Label = 1
