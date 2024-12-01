@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 from collections import Counter
+from tabulate import tabulate
+from termcolor import colored
 import json
 import os
 
@@ -54,21 +56,52 @@ def cosine_similarity(x1, x2):
     return 1 - (dot_product / magnitude) if magnitude != 0 else 1
 
 
-def normalize_features(features):
+import pandas as pd
+import os
+from tabulate import tabulate
+from termcolor import colored
+
+def normalize_features(features, output_file="Output/Normalization/normalized_features.csv"):
     """
     Normalize features to a 0-1 range using min-max normalization.
     Converts boolean columns to integers and scales all numeric features.
+    Prints results with color-coded highlights and saves to an output file.
     
     Args:
         features (pandas.DataFrame): Input feature dataframe
+        output_file (str): Path to save the normalized features
     
     Returns:
         pandas.DataFrame: Normalized features with all values between 0 and 1
     """
-    # Convert boolean columns to integers
+    # Step 1: Convert boolean columns to integers
     features = features.astype({col: int for col in features.select_dtypes(include=["bool"]).columns})
-    # Perform min-max normalization: (x - min(x)) / (max(x) - min(x))
-    return (features - features.min()) / (features.max() - features.min())
+    
+    # Step 2: Perform min-max normalization
+    normalized_features = (features - features.min()) / (features.max() - features.min())
+    
+    # Step 3: Color-coded console output
+    console_output = tabulate(normalized_features.head(), headers="keys", tablefmt="fancy_grid", showindex=False)
+    print(colored("\n=== Normalized Features (Preview) ===", "cyan", attrs=["bold"]))
+    print(console_output)
+    print(colored("\nFull dataset saved to output file.", "green"))
+    
+    # Step 4: Save normalized features to CSV
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    normalized_features.to_csv(output_file, index=False)
+    
+    # Step 5: Save a summary report to a text file
+    summary_file = output_file.replace(".csv", "_summary.txt")
+    with open(summary_file, "w") as f:
+        f.write("### Normalization Summary Report ###\n")
+        f.write(f"- Input columns: {', '.join(features.columns)}\n")
+        f.write(f"- Output file: {output_file}\n")
+        f.write(f"- Number of samples: {len(features)}\n")
+    
+    # Bonus: Notify user of file location
+    print(colored(f"\nNormalization completed! Results saved at:\n - {output_file}\n - {summary_file}", "yellow"))
+    
+    return normalized_features
 
 
 # Data Preparation and Management Functions

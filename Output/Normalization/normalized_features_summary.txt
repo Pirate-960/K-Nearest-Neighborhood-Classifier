@@ -1,0 +1,4 @@
+### Normalization Summary Report ###
+- Input columns: Day, Outlook_Rain, Outlook_Sunny, Temperature_Hot, Temperature_Mild, Humidity_Normal, Wind_Weak
+- Output file: Output/Normalization/normalized_features.csv
+- Number of samples: 14
