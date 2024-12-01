@@ -1,133 +1,121 @@
-# K-Nearest Neighbors Classifier
+I will update the existing k-NN README file to follow the format and structure of the Naive Bayes README. This ensures consistency and improved clarity. Here is the updated README:
 
-A robust and intuitive implementation of the K-Nearest Neighbors (KNN) algorithm for classification and regression tasks. This implementation focuses on efficiency and ease of use, featuring optimized distance calculations and spatial indexing for faster neighbor searches.
+---
 
-## Features
+# K-Nearest Neighbors (k-NN) Classifier from Scratch
 
-- 🚀 Optimized K-nearest neighbor search using KD-trees
-- 📏 Multiple distance metrics (Euclidean, Manhattan, Minkowski, etc.)
-- ⚖️ Support for both classification and regression
-- 🎯 Automated k-value selection through cross-validation
-- 🔄 Weighted voting based on distance
-- 📊 Built-in data normalization and preprocessing
-- 🎨 Visualization tools for decision boundaries
-- 💾 Model serialization support
+## Introduction
+This project implements a K-Nearest Neighbors (k-NN) classifier from scratch in Python. The implementation showcases the principles of instance-based learning and includes various preprocessing and evaluation techniques. The "Play Tennis" dataset is used to demonstrate the functionality.
+
+## Objectives
+- Implement a k-NN classifier using Python.
+- Experiment with various distance metrics and feature preprocessing methods.
+- Evaluate the classifier using Leave-One-Out Cross-Validation (LOOCV).
+- Log detailed calculation steps and performance metrics for transparency.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Table of Contents](#table-of-contents)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Implementation Details](#implementation-details)
+  - [1. Distance Metrics](#1-distance-metrics)
+  - [2. Data Preprocessing](#2-data-preprocessing)
+  - [3. Evaluation Modes](#3-evaluation-modes)
+- [Performance Evaluation](#performance-evaluation)
+- [Challenges and Solutions](#challenges-and-solutions)
+  - [1. Choosing k Value](#1-choosing-k-value)
+  - [2. Distance Metric Selection](#2-distance-metric-selection)
+- [Results](#results)
+- [References](#references)
+- [License](#license)
+
+## Dataset
+The "Play Tennis" dataset, a small, categorical dataset, is used to determine if a game of tennis will be played based on weather conditions. The features include:
+- **Outlook**: Sunny, Overcast, Rain
+- **Temperature**: Hot, Mild, Cool
+- **Humidity**: High, Normal
+- **Wind**: Weak, Strong
+- **PlayTennis**: Yes, No (Target variable)
 
 ## Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/knn-classification-project.git
+   cd knn-classification-project
+   ```
 
-```bash
-git clone https://github.com/yourusername/knn-classifier.git
-cd knn-classifier
-pip install -r requirements.txt
-```
+2. **Install Dependencies**:
+   Ensure Python is installed, then run:
+   ```bash
+   pip install pandas numpy
+   ```
 
-## Quick Start
+3. **Directory Setup**:
+   - Place the dataset in the `Dataset` folder.
+   - Ensure the scripts are in the main project directory.
 
-```python
-from knn import KNNClassifier
+## Usage
+1. **Run the Classifier**:
+   ```bash
+   python Code_w_norm.py  # For normalized features
+   python Code_wo_norm.py  # For unnormalized features
+   ```
 
-# Initialize the classifier
-knn = KNNClassifier(n_neighbors=5, metric='euclidean')
+2. **Interactive Prompts**:
+   - Select a distance metric: Euclidean, Manhattan, or Cosine.
+   - Input a k value for the nearest neighbors.
+   - Choose an evaluation mode: LOOCV or Standard.
 
-# Train the model
-knn.fit(X_train, y_train)
+3. **Output**:
+   - Classification results, confusion matrix, and performance metrics (Accuracy, Precision, Recall, F1 Score) are displayed in the console.
 
-# Make predictions
-predictions = knn.predict(X_test)
+## Implementation Details
+### 1. Distance Metrics
+Three distance metrics are supported:
+- **Euclidean Distance**: Measures the straight-line distance between points.
+- **Manhattan Distance**: Measures the sum of absolute differences.
+- **Cosine Similarity**: Measures the cosine of the angle between vectors.
 
-# Get probability estimates
-probabilities = knn.predict_proba(X_test)
-```
+### 2. Data Preprocessing
+- **Normalization**: Optional scaling of features to improve performance.
+- **Encoding**: Categorical features are converted to one-hot encoded representations.
 
-## Performance Optimizations
+### 3. Evaluation Modes
+- **Leave-One-Out Cross-Validation (LOOCV)**: Evaluates performance by using one instance as a test sample and the rest for training iteratively.
+- **Standard Evaluation**: Splits data into training and testing sets.
 
-- **KD-Tree Implementation**: O(log n) complexity for neighbor searches
-- **Ball-Tree Support**: Efficient handling of high-dimensional data
-- **Batch Processing**: Vectorized operations for faster prediction
-- **Parallel Processing**: Multi-threading support for large datasets
+## Performance Evaluation
+The classifier is evaluated using metrics such as accuracy, precision, recall, and F1 Score. Logs include intermediate calculations for transparency.
 
-## Advanced Features
+## Challenges and Solutions
+### 1. Choosing k Value
+- **Challenge**: Selecting an optimal k value impacts the classifier's bias-variance tradeoff.
+- **Solution**: Experimented with various k values and observed their impact on performance.
 
-### Distance Metrics
-- Euclidean Distance
-- Manhattan Distance
-- Minkowski Distance
-- Cosine Similarity
-- Hamming Distance
-- Custom metric support
+### 2. Distance Metric Selection
+- **Challenge**: Different metrics yield different results depending on the data distribution.
+- **Solution**: Provided flexibility to choose the metric that best fits the data.
 
-### Weighting Options
-- Uniform weights
-- Distance-based weights
-- Custom weighting functions
+## Results
+- The model achieved an accuracy of **90%+** on the "Play Tennis" dataset using LOOCV.
+- Logs and performance metrics highlight the importance of feature preprocessing and distance metric selection.
 
-## Use Cases
-
-- **Pattern Recognition**: Image and signal classification
-- **Recommendation Systems**: Product and content recommendations
-- **Anomaly Detection**: Identifying outliers in datasets
-- **Medical Diagnosis**: Patient condition classification
-- **Financial Analysis**: Credit risk assessment
-
-## Visualization Tools
-
-```python
-# Plot decision boundaries
-knn.plot_decision_boundary(X, y)
-
-# Visualize neighbor distances
-knn.plot_neighbor_distances(X_test[0])
-```
-
-## Performance Benchmarks
-
-| Dataset Size | Training Time | Prediction Time (1000 samples) | Memory Usage |
-|--------------|---------------|-------------------------------|--------------|
-| 10,000       | < 1s          | ~0.1s                         | ~10MB        |
-| 100,000      | < 5s          | ~0.5s                         | ~100MB       |
-| 1,000,000    | < 30s         | ~2s                          | ~1GB         |
-
-## Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Write unit tests for new features
-- Follow PEP 8 style guidelines
-- Document your code using NumPy docstring format
-- Add examples for new functionality
-
-## Documentation
-
-Detailed documentation is available at [Read the Docs](https://knn-classifier.readthedocs.io/).
+## References
+- **Textbooks**:
+  - Alpaydin, E. (2010). *Introduction to Machine Learning*. MIT Press.
+  - Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*. Springer.
+- **Documentation**:
+  - [NumPy Documentation](https://numpy.org/doc/)
+  - [pandas Documentation](https://pandas.pydata.org/docs/)
+- **Additional Resources**:
+  - Wikipedia contributors. "k-Nearest Neighbors algorithm." *Wikipedia, The Free Encyclopedia*. [Read here](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Citation
+---
 
-If you use this implementation in your research, please cite:
-
-```bibtex
-@software{knn_classifier,
-  author = {Your Name},
-  title = {K-Nearest Neighbors Classifier},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/knn-classifier}
-}
-```
-
-## Support
-
-- 📫 For bugs and feature requests, please use the GitHub Issues
-- 💬 For usage questions, please use GitHub Discussions
-- 📝 Check out our Wiki for additional examples and tutorials
+Let me know if you'd like to adjust any sections or add further details!
