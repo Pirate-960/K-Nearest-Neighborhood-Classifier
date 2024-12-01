@@ -34,6 +34,25 @@ def load_dataset_from_json(file_path):
     return pd.DataFrame(data)
 
 
+# Function to print and save dataset
+def print_and_save_dataset(dataset, output_path):
+    # Create the output directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    # Format the dataset for clear console display
+    formatted_dataset = dataset.to_markdown(index=False, tablefmt="grid")
+
+    # Print dataset to console
+    print("\n=== Dataset Table ===")
+    print(formatted_dataset)
+
+    # Save dataset to the output file
+    with open(output_path, "w") as dataset_file:
+        dataset_file.write("# Dataset Table\n")
+        dataset_file.write(formatted_dataset)
+        dataset_file.write("\n")
+
+
 def encode_categorical_features(df):
     features = df.drop(columns=['PlayTennis'])
     target = df['PlayTennis']
@@ -218,12 +237,9 @@ if __name__ == "__main__":
     json_path = "Dataset/play_tennis.json"
     dataset = load_dataset_from_json(json_path)
 
-    # Print and save dataset
     dataset_output_path = "Output/Dataset.txt"
-    print("\nDataset Table:")
-    print(dataset)
-    with open(dataset_output_path, "w") as dataset_file:
-        dataset_file.write(dataset.to_string())
+    print_and_save_dataset(dataset, dataset_output_path)
+
 
     features, labels = encode_categorical_features(dataset)
     features = normalize_features(features).values
