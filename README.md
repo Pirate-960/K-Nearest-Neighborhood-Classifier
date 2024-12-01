@@ -1,4 +1,3 @@
-I will update the existing k-NN README file to follow the format and structure of the Naive Bayes README. This ensures consistency and improved clarity. Here is the updated README:
 
 ---
 
@@ -43,7 +42,7 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/knn-classification-project.git
+   git clone https://github.com/pirate-960/knn-classification-project.git
    cd knn-classification-project
    ```
 
