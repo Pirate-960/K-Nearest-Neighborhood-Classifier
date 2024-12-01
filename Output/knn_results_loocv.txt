@@ -1,4 +1,4 @@
-===== k-NN Classification (loocv) =====
+===== k-NN Classification Results (loocv) =====
 k: 3, Distance Metric: euclidean_distance
 
 --------------------------------------------------

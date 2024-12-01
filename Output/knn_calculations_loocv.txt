@@ -1,0 +1,280 @@
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.0030
+Distance to Neighbor 2: 1.0118
+Distance to Neighbor 3: 2.0133
+Distance to Neighbor 4: 2.0235
+Distance to Neighbor 5: 2.2689
+Distance to Neighbor 6: 2.0526
+Distance to Neighbor 7: 1.5133
+Distance to Neighbor 8: 1.5423
+Distance to Neighbor 9: 2.3408
+Distance to Neighbor 10: 2.1428
+Distance to Neighbor 11: 2.1716
+Distance to Neighbor 12: 1.6888
+Distance to Neighbor 13: 2.4495
+
+--- Selected Nearest Neighbors ---
+Neighbor 1 - Distance: 1.0030, Label: 0
+Neighbor 2 - Distance: 1.0118, Label: 1
+Neighbor 7 - Distance: 1.5133, Label: 0
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.0030
+Distance to Neighbor 2: 1.4163
+Distance to Neighbor 3: 2.2414
+Distance to Neighbor 4: 2.2479
+Distance to Neighbor 5: 2.0235
+Distance to Neighbor 6: 1.7742
+Distance to Neighbor 7: 1.7925
+Distance to Neighbor 8: 1.8138
+Distance to Neighbor 9: 2.5256
+Distance to Neighbor 10: 1.8653
+Distance to Neighbor 11: 1.8952
+Distance to Neighbor 12: 1.9277
+Distance to Neighbor 13: 2.2027
+
+--- Selected Nearest Neighbors ---
+Neighbor 1 - Distance: 1.0030, Label: 0
+Neighbor 2 - Distance: 1.4163, Label: 1
+Neighbor 6 - Distance: 1.7742, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.0118
+Distance to Neighbor 2: 1.4163
+Distance to Neighbor 3: 1.7338
+Distance to Neighbor 4: 1.7389
+Distance to Neighbor 5: 2.0133
+Distance to Neighbor 6: 1.7592
+Distance to Neighbor 7: 1.7742
+Distance to Neighbor 8: 1.7925
+Distance to Neighbor 9: 2.0712
+Distance to Neighbor 10: 2.3192
+Distance to Neighbor 11: 1.8653
+Distance to Neighbor 12: 1.2616
+Distance to Neighbor 13: 2.1716
+
+--- Selected Nearest Neighbors ---
+Neighbor 1 - Distance: 1.0118, Label: 0
+Neighbor 12 - Distance: 1.2616, Label: 1
+Neighbor 2 - Distance: 1.4163, Label: 0
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.0133
+Distance to Neighbor 2: 2.2414
+Distance to Neighbor 3: 1.7338
+Distance to Neighbor 4: 1.4163
+Distance to Neighbor 5: 1.7389
+Distance to Neighbor 6: 2.0133
+Distance to Neighbor 7: 1.4473
+Distance to Neighbor 8: 2.0366
+Distance to Neighbor 9: 1.1014
+Distance to Neighbor 10: 2.0712
+Distance to Neighbor 11: 1.5423
+Distance to Neighbor 12: 2.1164
+Distance to Neighbor 13: 1.2616
+
+--- Selected Nearest Neighbors ---
+Neighbor 9 - Distance: 1.1014, Label: 1
+Neighbor 13 - Distance: 1.2616, Label: 0
+Neighbor 4 - Distance: 1.4163, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.0235
+Distance to Neighbor 2: 2.2479
+Distance to Neighbor 3: 1.7389
+Distance to Neighbor 4: 1.4163
+Distance to Neighbor 5: 1.0030
+Distance to Neighbor 6: 1.4226
+Distance to Neighbor 7: 2.0133
+Distance to Neighbor 8: 1.4473
+Distance to Neighbor 9: 1.0714
+Distance to Neighbor 10: 2.0526
+Distance to Neighbor 11: 2.0712
+Distance to Neighbor 12: 1.5423
+Distance to Neighbor 13: 1.8653
+
+--- Selected Nearest Neighbors ---
+Neighbor 5 - Distance: 1.0030, Label: 0
+Neighbor 9 - Distance: 1.0714, Label: 1
+Neighbor 4 - Distance: 1.4163, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.2689
+Distance to Neighbor 2: 2.0235
+Distance to Neighbor 3: 2.0133
+Distance to Neighbor 4: 1.7389
+Distance to Neighbor 5: 1.0030
+Distance to Neighbor 6: 1.0030
+Distance to Neighbor 7: 2.2414
+Distance to Neighbor 8: 1.7474
+Distance to Neighbor 9: 1.4473
+Distance to Neighbor 10: 1.7742
+Distance to Neighbor 11: 1.7925
+Distance to Neighbor 12: 1.8138
+Distance to Neighbor 13: 1.5423
+
+--- Selected Nearest Neighbors ---
+Neighbor 5 - Distance: 1.0030, Label: 1
+Neighbor 6 - Distance: 1.0030, Label: 1
+Neighbor 9 - Distance: 1.4473, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.0526
+Distance to Neighbor 2: 1.7742
+Distance to Neighbor 3: 1.7592
+Distance to Neighbor 4: 2.0133
+Distance to Neighbor 5: 1.4226
+Distance to Neighbor 6: 1.0030
+Distance to Neighbor 7: 2.0015
+Distance to Neighbor 8: 1.4226
+Distance to Neighbor 9: 1.7474
+Distance to Neighbor 10: 1.4473
+Distance to Neighbor 11: 1.4656
+Distance to Neighbor 12: 1.4876
+Distance to Neighbor 13: 1.8138
+
+--- Selected Nearest Neighbors ---
+Neighbor 6 - Distance: 1.0030, Label: 0
+Neighbor 5 - Distance: 1.4226, Label: 1
+Neighbor 8 - Distance: 1.4226, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.5133
+Distance to Neighbor 2: 1.7925
+Distance to Neighbor 3: 1.7742
+Distance to Neighbor 4: 1.4473
+Distance to Neighbor 5: 2.0133
+Distance to Neighbor 6: 2.2414
+Distance to Neighbor 7: 2.0015
+Distance to Neighbor 8: 1.4163
+Distance to Neighbor 9: 1.7389
+Distance to Neighbor 10: 1.4329
+Distance to Neighbor 11: 1.4473
+Distance to Neighbor 12: 2.0366
+Distance to Neighbor 13: 1.7925
+
+--- Selected Nearest Neighbors ---
+Neighbor 8 - Distance: 1.4163, Label: 1
+Neighbor 10 - Distance: 1.4329, Label: 1
+Neighbor 4 - Distance: 1.4473, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.5423
+Distance to Neighbor 2: 1.8138
+Distance to Neighbor 3: 1.7925
+Distance to Neighbor 4: 2.0366
+Distance to Neighbor 5: 1.4473
+Distance to Neighbor 6: 1.7474
+Distance to Neighbor 7: 1.4226
+Distance to Neighbor 8: 1.4163
+Distance to Neighbor 9: 1.7338
+Distance to Neighbor 10: 1.4226
+Distance to Neighbor 11: 2.0133
+Distance to Neighbor 12: 1.4473
+Distance to Neighbor 13: 2.2689
+
+--- Selected Nearest Neighbors ---
+Neighbor 8 - Distance: 1.4163, Label: 0
+Neighbor 7 - Distance: 1.4226, Label: 1
+Neighbor 10 - Distance: 1.4226, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.3408
+Distance to Neighbor 2: 2.5256
+Distance to Neighbor 3: 2.0712
+Distance to Neighbor 4: 1.1014
+Distance to Neighbor 5: 1.0714
+Distance to Neighbor 6: 1.4473
+Distance to Neighbor 7: 1.7474
+Distance to Neighbor 8: 1.7389
+Distance to Neighbor 9: 1.7338
+Distance to Neighbor 10: 1.7338
+Distance to Neighbor 11: 1.7389
+Distance to Neighbor 12: 1.7474
+Distance to Neighbor 13: 1.4473
+
+--- Selected Nearest Neighbors ---
+Neighbor 5 - Distance: 1.0714, Label: 1
+Neighbor 4 - Distance: 1.1014, Label: 1
+Neighbor 6 - Distance: 1.4473, Label: 0
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.1428
+Distance to Neighbor 2: 1.8653
+Distance to Neighbor 3: 2.3192
+Distance to Neighbor 4: 2.0712
+Distance to Neighbor 5: 2.0526
+Distance to Neighbor 6: 1.7742
+Distance to Neighbor 7: 1.4473
+Distance to Neighbor 8: 1.4329
+Distance to Neighbor 9: 1.4226
+Distance to Neighbor 10: 1.7338
+Distance to Neighbor 11: 1.4163
+Distance to Neighbor 12: 2.0059
+Distance to Neighbor 13: 1.7474
+
+--- Selected Nearest Neighbors ---
+Neighbor 11 - Distance: 1.4163, Label: 1
+Neighbor 9 - Distance: 1.4226, Label: 1
+Neighbor 8 - Distance: 1.4329, Label: 0
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.1716
+Distance to Neighbor 2: 1.8952
+Distance to Neighbor 3: 1.8653
+Distance to Neighbor 4: 1.5423
+Distance to Neighbor 5: 2.0712
+Distance to Neighbor 6: 1.7925
+Distance to Neighbor 7: 1.4656
+Distance to Neighbor 8: 1.4473
+Distance to Neighbor 9: 2.0133
+Distance to Neighbor 10: 1.7389
+Distance to Neighbor 11: 1.4163
+Distance to Neighbor 12: 2.0015
+Distance to Neighbor 13: 1.0118
+
+--- Selected Nearest Neighbors ---
+Neighbor 13 - Distance: 1.0118, Label: 0
+Neighbor 11 - Distance: 1.4163, Label: 1
+Neighbor 8 - Distance: 1.4473, Label: 0
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 1.6888
+Distance to Neighbor 2: 1.9277
+Distance to Neighbor 3: 1.2616
+Distance to Neighbor 4: 2.1164
+Distance to Neighbor 5: 1.5423
+Distance to Neighbor 6: 1.8138
+Distance to Neighbor 7: 1.4876
+Distance to Neighbor 8: 2.0366
+Distance to Neighbor 9: 1.4473
+Distance to Neighbor 10: 1.7474
+Distance to Neighbor 11: 2.0059
+Distance to Neighbor 12: 2.0015
+Distance to Neighbor 13: 2.2374
+
+--- Selected Nearest Neighbors ---
+Neighbor 3 - Distance: 1.2616, Label: 1
+Neighbor 9 - Distance: 1.4473, Label: 1
+Neighbor 7 - Distance: 1.4876, Label: 1
+
+--- Distance Calculations for Test Instance ---
+Distance to Neighbor 1: 2.4495
+Distance to Neighbor 2: 2.2027
+Distance to Neighbor 3: 2.1716
+Distance to Neighbor 4: 1.2616
+Distance to Neighbor 5: 1.8653
+Distance to Neighbor 6: 1.5423
+Distance to Neighbor 7: 1.8138
+Distance to Neighbor 8: 1.7925
+Distance to Neighbor 9: 2.2689
+Distance to Neighbor 10: 1.4473
+Distance to Neighbor 11: 1.7474
+Distance to Neighbor 12: 1.0118
+Distance to Neighbor 13: 2.2374
+
+--- Selected Nearest Neighbors ---
+Neighbor 12 - Distance: 1.0118, Label: 1
+Neighbor 4 - Distance: 1.2616, Label: 1
+Neighbor 10 - Distance: 1.4473, Label: 1

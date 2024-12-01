@@ -1,4 +1,4 @@
-===== k-NN Classification (standard) =====
+===== k-NN Classification Results (standard) =====
 k: 3, Distance Metric: euclidean_distance
 
 --------------------------------------------------

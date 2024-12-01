@@ -43,38 +43,35 @@ def encode_categorical_features(df):
 
 
 # Core k-NN Implementation
-def knn_predict(test_instance, training_data, training_labels, k, distance_metric, calculations_log):
+def knn_predict(test_instance, training_data, training_labels, k, distance_metric, log):
     distances = []
-    calculations_log.write("\n--- Distance Calculations for Test Instance ---\n")
     for i in range(len(training_data)):
         distance = distance_metric(test_instance, training_data[i])
         distances.append((distance, training_labels[i], i + 1))
-        calculations_log.write(f"Distance to Neighbor {i + 1}: {distance:.4f}\n")
-
     distances.sort(key=lambda x: x[0])
     k_nearest_neighbors = distances[:k]
     k_nearest_labels = [label for _, label, _ in k_nearest_neighbors]
 
     # Log and print the nearest neighbors
-    calculations_log.write("\n--- Selected Nearest Neighbors ---\n")
-    print("\n--- Selected Nearest Neighbors ---")
+    log.write("\nNearest Neighbors for test instance:\n")
+    print("\nNearest Neighbors for test instance:")
     for distance, label, idx in k_nearest_neighbors:
         neighbor_info = f"Neighbor {idx} - Distance: {distance:.4f}, Label: {label}"
         print(neighbor_info)
-        calculations_log.write(neighbor_info + "\n")
+        log.write(neighbor_info + "\n")
     
     most_common = Counter(k_nearest_labels).most_common(1)[0][0]
     return most_common
 
 
-def evaluate_knn(features, labels, k, distance_metric, results_file, calculations_file, mode="standard"):
+def evaluate_knn(features, labels, k, distance_metric, log_file, mode="standard"):
     correct_predictions = 0
     tp, tn, fp, fn = 0, 0, 0, 0
     results = []
 
-    with open(results_file, 'w') as results_log, open(calculations_file, 'w') as calculations_log:
-        results_log.write(f"===== k-NN Classification Results ({mode}) =====\n")
-        results_log.write(f"k: {k}, Distance Metric: {distance_metric.__name__}\n\n")
+    with open(log_file, 'w') as log:
+        log.write(f"===== k-NN Classification ({mode}) =====\n")
+        log.write(f"k: {k}, Distance Metric: {distance_metric.__name__}\n\n")
 
         if mode == "loocv":
             for i in range(len(features)):
@@ -82,14 +79,14 @@ def evaluate_knn(features, labels, k, distance_metric, results_file, calculation
                 test_label = labels[i]
                 training_data = np.delete(features, i, axis=0)
                 training_labels = np.delete(labels, i, axis=0)
-                predicted_label = knn_predict(test_instance, training_data, training_labels, k, distance_metric, calculations_log)
+                predicted_label = knn_predict(test_instance, training_data, training_labels, k, distance_metric, log)
                 correct = predicted_label == test_label
                 results.append((i + 1, test_label, predicted_label, correct))
                 correct_predictions += correct
         else:  # Standard evaluation using entire dataset
             for i in range(len(features)):
                 test_instance = features[i]
-                predicted_label = knn_predict(test_instance, features, labels, k, distance_metric, calculations_log)
+                predicted_label = knn_predict(test_instance, features, labels, k, distance_metric, log)
                 correct = predicted_label == labels[i]
                 results.append((i + 1, labels[i], predicted_label, correct))
                 correct_predictions += correct
@@ -112,14 +109,14 @@ def evaluate_knn(features, labels, k, distance_metric, results_file, calculation
         recall = tp / (tp + fn) if tp + fn > 0 else 0
         f1_score = (2 * precision * recall) / (precision + recall) if precision + recall > 0 else 0
 
-        # Log detailed results
+        # Print and log detailed results
         header = "--------------------------------------------------\n"
         column_headers = "| Instance |   Actual   |   Predicted  |  Correct |\n"
         divider = "--------------------------------------------------\n"
 
         # Print header
         print(header + column_headers + divider, end="")
-        results_log.write(header + column_headers + divider)
+        log.write(header + column_headers + divider)
 
         for idx, actual, predicted, correct in results:
             actual_str = "Yes" if actual == 1 else "No"
@@ -127,15 +124,16 @@ def evaluate_knn(features, labels, k, distance_metric, results_file, calculation
             correct_str = "True" if correct else "False"
             row = f"|   {idx:<6} |   {actual_str:<8} |   {predicted_str:<10} |  {correct_str:<7} |\n"
             print(row, end="")
-            results_log.write(row)
+            log.write(row)
 
         # Print and log footer
         print(divider)
-        results_log.write(divider)
+        log.write(divider)
 
         print(f"Overall Accuracy: {accuracy:.2f}\n\n")
-        results_log.write(f"Overall Accuracy: {accuracy:.2f}\n\n")
+        log.write(f"Overall Accuracy: {accuracy:.2f}\n\n")
 
+        # Print and log confusion matrix
         print("--------------------------------------------------")
         print("Confusion Matrix:")
         print("--------------------------------------------------")
@@ -155,24 +153,24 @@ def evaluate_knn(features, labels, k, distance_metric, results_file, calculation
         print(f"F1 Score: {f1_score:.2f}")
         print("--------------------------------------------------")
 
-        results_log.write("--------------------------------------------------\n")
-        results_log.write("Confusion Matrix:\n")
-        results_log.write("--------------------------------------------------\n")
-        results_log.write("                   Predicted\n")
-        results_log.write("            |   Yes    |   No     |\n")
-        results_log.write("------------|----------|----------|\n")
-        results_log.write(f"Actual Yes  |   {tp:<6} |   {fn:<6} |\n")
-        results_log.write(f"Actual No   |   {fp:<6} |   {tn:<6} |\n")
-        results_log.write("--------------------------------------------------\n\n")
-        results_log.write("--------------------------------------------------\n")
-        results_log.write(f"True Positives (TP):  {tp}\n")
-        results_log.write(f"True Negatives (TN):  {tn}\n")
-        results_log.write(f"False Positives (FP): {fp}\n")
-        results_log.write(f"False Negatives (FN): {fn}\n")
-        results_log.write(f"Precision: {precision:.2f}\n")
-        results_log.write(f"Recall: {recall:.2f}\n")
-        results_log.write(f"F1 Score: {f1_score:.2f}\n")
-        results_log.write("--------------------------------------------------\n")
+        log.write("--------------------------------------------------\n")
+        log.write("Confusion Matrix:\n")
+        log.write("--------------------------------------------------\n")
+        log.write("                   Predicted\n")
+        log.write("            |   Yes    |   No     |\n")
+        log.write("------------|----------|----------|\n")
+        log.write(f"Actual Yes  |   {tp:<6} |   {fn:<6} |\n")
+        log.write(f"Actual No   |   {fp:<6} |   {tn:<6} |\n")
+        log.write("--------------------------------------------------\n\n")
+        log.write("--------------------------------------------------\n")
+        log.write(f"True Positives (TP):  {tp}\n")
+        log.write(f"True Negatives (TN):  {tn}\n")
+        log.write(f"False Positives (FP): {fp}\n")
+        log.write(f"False Negatives (FN): {fn}\n")
+        log.write(f"Precision: {precision:.2f}\n")
+        log.write(f"Recall: {recall:.2f}\n")
+        log.write(f"F1 Score: {f1_score:.2f}\n")
+        log.write("--------------------------------------------------\n")
 
 
 # Execution
@@ -216,6 +214,5 @@ if __name__ == "__main__":
     features = normalize_features(features).values
     labels = labels.values
 
-    results_file = f"Output/knn_results_{mode}.txt"
-    calculations_file = f"Output/knn_calculations_{mode}.txt"
-    evaluate_knn(features, labels, k, distance_metric, results_file, calculations_file, mode)
+    log_file = f"Output/knn_results_{mode}.txt"
+    evaluate_knn(features, labels, k, distance_metric, log_file, mode)
