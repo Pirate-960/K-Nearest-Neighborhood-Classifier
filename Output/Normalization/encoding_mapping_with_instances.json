@@ -1,0 +1,140 @@
+{
+    "mapping": {
+        "Outlook": {
+            "Sunny": 0,
+            "Overcast": 1,
+            "Rain": 2
+        },
+        "Temperature": {
+            "Hot": 0,
+            "Mild": 1,
+            "Cool": 2
+        },
+        "Humidity": {
+            "High": 0,
+            "Normal": 1
+        },
+        "Wind": {
+            "Weak": 0,
+            "Strong": 1
+        },
+        "PlayTennis": {
+            "Yes": 1,
+            "No": 0
+        }
+    },
+    "instances": [
+        {
+            "Day": 1,
+            "Outlook": 0,
+            "Temperature": 0,
+            "Humidity": 0,
+            "Wind": 0,
+            "PlayTennis": 0
+        },
+        {
+            "Day": 2,
+            "Outlook": 0,
+            "Temperature": 0,
+            "Humidity": 0,
+            "Wind": 1,
+            "PlayTennis": 0
+        },
+        {
+            "Day": 3,
+            "Outlook": 1,
+            "Temperature": 0,
+            "Humidity": 0,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 4,
+            "Outlook": 2,
+            "Temperature": 1,
+            "Humidity": 0,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 5,
+            "Outlook": 2,
+            "Temperature": 2,
+            "Humidity": 1,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 6,
+            "Outlook": 2,
+            "Temperature": 2,
+            "Humidity": 1,
+            "Wind": 1,
+            "PlayTennis": 0
+        },
+        {
+            "Day": 7,
+            "Outlook": 1,
+            "Temperature": 2,
+            "Humidity": 1,
+            "Wind": 1,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 8,
+            "Outlook": 0,
+            "Temperature": 1,
+            "Humidity": 0,
+            "Wind": 0,
+            "PlayTennis": 0
+        },
+        {
+            "Day": 9,
+            "Outlook": 0,
+            "Temperature": 2,
+            "Humidity": 1,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 10,
+            "Outlook": 2,
+            "Temperature": 1,
+            "Humidity": 1,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 11,
+            "Outlook": 0,
+            "Temperature": 1,
+            "Humidity": 1,
+            "Wind": 1,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 12,
+            "Outlook": 1,
+            "Temperature": 1,
+            "Humidity": 0,
+            "Wind": 1,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 13,
+            "Outlook": 1,
+            "Temperature": 0,
+            "Humidity": 1,
+            "Wind": 0,
+            "PlayTennis": 1
+        },
+        {
+            "Day": 14,
+            "Outlook": 2,
+            "Temperature": 1,
+            "Humidity": 0,
+            "Wind": 1,
+            "PlayTennis": 0
+        }
+    ]
+}
