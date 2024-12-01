@@ -51,7 +51,7 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
    ```bash
    pip install pandas numpy
    ```
-   For Normalized Classifier - Special Case -:
+   **For Normalized Classifier - Special Case -:**
       ```bash
    pip install pandas numpy tabulate termcolor
    ```
