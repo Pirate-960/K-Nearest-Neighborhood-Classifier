@@ -59,16 +59,24 @@ The "Play Tennis" dataset, a small, categorical dataset, is used to determine if
 ## Usage
 1. **Run the Classifier**:
    ```bash
+   cd Code
+   ```
+   ```bash
    python Code_w_norm.py  # For normalized features
    python Code_wo_norm.py  # For unnormalized features
    ```
 
-2. **Interactive Prompts**:
+   **One Important Warning:**
+   
+   - If You are Running the Classifier from Command Prompt -> Update all Input / Output File Paths To Absolute Path Format.
+   - If You are Running From VsCode - Enjoy - !
+  
+3. **Interactive Prompts**:
    - Select a distance metric: Euclidean, Manhattan, or Cosine.
    - Input a k value for the nearest neighbors.
    - Choose an evaluation mode: LOOCV or Standard.
 
-3. **Output**:
+4. **Output**:
    - Classification results, confusion matrix, and performance metrics (Accuracy, Precision, Recall, F1 Score) are displayed in the console.
 
 ## Implementation Details
